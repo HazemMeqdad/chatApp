@@ -6,3 +6,5 @@ const RoomSchema = new mongoose.Schema({
     description: String,
     key: String
 })
+
+module.exports = mongoose.model('Room', RoomSchema);
