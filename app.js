@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
-app.use('/messages', messagesRouter);
+app.use('/api/v1/messages', messagesRouter);
 
 app.use('/chat', checkAuth, (req, res) => {
     const roomKey = req.cookies.roomKey;
