@@ -29,5 +29,8 @@
     "md5": "^2.3.0",
     "mongoose": "^7.4.3",
     "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2"
   }
 }

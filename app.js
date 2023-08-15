@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const checkAuth = require('./api/middleware/check-auth')
 const Room = require('./models/rome')
 
-const userRouter = require('./api/routes/user');
+const messagesRouter = require('./api/routes/messages');
 
 const app = express();
 
@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
-app.use('/user', userRouter);
+app.use('/messages', messagesRouter);
 
 app.use('/chat', checkAuth, (req, res) => {
     const roomKey = req.cookies.roomKey;
