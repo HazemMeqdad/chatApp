@@ -2,11 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const cookieParser = require('cookie-parser')
-const ejs = require('ejs');
+const mongoose = require('mongoose');
 
 const userRouter = require('./api/routes/user');
 
 const app = express();
+
+mongoose.connect(process.env.MONGO_URL)
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
